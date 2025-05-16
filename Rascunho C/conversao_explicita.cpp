@@ -12,15 +12,9 @@ int main()
     double valor_double = 3.14;
     int valor_int = static_cast<int>(valor_double); // valor_int será 3
 
-    cout << "Valor double: " << valor_double << endl;
-    cout << "Valor int: " << valor_int << endl; // Saída: 3.14 convertido para 3
-
-    int valor_int2 = 10;
-    float valor_float = static_cast<float>(valor_int2); // valor_float será 10.0
-    double outro_float = valor_int2;                    // Conversão implícita para double também é possível
-
-    cout << "Valor float: " << valor_float << endl; // Saída: 10.0
-    cout << "Outro float: " << outro_float << endl; // Saída: 10.0
+    int valor_int = 10;
+    float valor_float = static_cast<float>(valor_int); // valor_float será 10.0
+    double outro_float = valor_int;                    // Conversão implícita para double também é possível
 
     int numero = 123;
     string texto = to_string(numero); // texto será "123"
@@ -42,8 +36,8 @@ int main()
 
     cout << get<0>(tupla) << " " << get<1>(tupla) << " " << get<2>(tupla) << endl; // Saída: 10 20 30
 
-    vector<int> v2 = {5, 2, 8, 2, 5, 1};
-    set<int> conjunto(v2.begin(), v2.end()); // Inicializa um set com os elementos do vector (duplicatas são removidas)
+    vector<int> v = {5, 2, 8, 2, 5, 1};
+    set<int> conjunto(v.begin(), v.end()); // Inicializa um set com os elementos do vector (duplicatas são removidas)
 
     for (int val : conjunto)
     {
